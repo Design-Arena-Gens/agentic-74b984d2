@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: 245 245 245;
+  --foreground: 15 15 15;
+  --accent: 222 72 49;
+  --accent-dark: 191 56 36;
+  --muted: 102 102 110;
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-accent: rgb(var(--accent));
+  --color-accent-dark: rgb(var(--accent-dark));
+  --color-muted: rgb(var(--muted));
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-card: 32px;
+}
+
+body {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(222, 72, 49, 0.08),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(28, 32, 161, 0.1),
+      transparent 45%
+    ),
+    rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
